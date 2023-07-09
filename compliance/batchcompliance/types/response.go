@@ -1,6 +1,6 @@
 package types
 
-import "github.com/michimani/gotwi/resources"
+import "github.com/nanom1t/gotwi/resources"
 
 type ListJobsOutput struct {
 	Data   []resources.Compliance   `json:"data"`

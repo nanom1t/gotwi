@@ -11,9 +11,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/michimani/gotwi/internal/gotwierrors"
-	"github.com/michimani/gotwi/internal/util"
-	"github.com/michimani/gotwi/resources"
+	"github.com/nanom1t/gotwi/internal/gotwierrors"
+	"github.com/nanom1t/gotwi/internal/util"
+	"github.com/nanom1t/gotwi/resources"
 )
 
 const (

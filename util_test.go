@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/michimani/gotwi"
+	"github.com/nanom1t/gotwi"
 	"github.com/stretchr/testify/assert"
 )
 

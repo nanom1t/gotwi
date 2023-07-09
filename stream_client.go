@@ -6,7 +6,7 @@ import (
 	"errors"
 	"net/http"
 
-	"github.com/michimani/gotwi/internal/util"
+	"github.com/nanom1t/gotwi/internal/util"
 )
 
 type StreamClient[T util.Response] struct {

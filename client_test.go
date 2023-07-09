@@ -10,9 +10,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/michimani/gotwi"
-	"github.com/michimani/gotwi/internal/util"
-	"github.com/michimani/gotwi/resources"
+	"github.com/nanom1t/gotwi"
+	"github.com/nanom1t/gotwi/internal/util"
+	"github.com/nanom1t/gotwi/resources"
 	"github.com/stretchr/testify/assert"
 )
 
