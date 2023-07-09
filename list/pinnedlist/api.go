@@ -3,8 +3,8 @@ package pinnedlist
 import (
 	"context"
 
-	"github.com/michimani/gotwi"
-	"github.com/michimani/gotwi/list/pinnedlist/types"
+	"github.com/nanom1t/gotwi"
+	"github.com/nanom1t/gotwi/list/pinnedlist/types"
 )
 
 const (

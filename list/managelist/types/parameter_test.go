@@ -5,8 +5,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/michimani/gotwi"
-	"github.com/michimani/gotwi/list/managelist/types"
+	"github.com/nanom1t/gotwi"
+	"github.com/nanom1t/gotwi/list/managelist/types"
 	"github.com/stretchr/testify/assert"
 )
 
