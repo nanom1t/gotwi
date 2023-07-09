@@ -5,8 +5,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/michimani/gotwi"
-	"github.com/michimani/gotwi/tweet/managetweet/types"
+	"github.com/nanom1t/gotwi"
+	"github.com/nanom1t/gotwi/tweet/managetweet/types"
 	"github.com/stretchr/testify/assert"
 )
 

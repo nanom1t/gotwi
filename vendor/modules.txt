@@ -1,0 +1,26 @@
+# github.com/davecgh/go-spew v1.1.0
+## explicit
+github.com/davecgh/go-spew/spew
+# github.com/michimani/gotwi v0.14.0
+## explicit; go 1.20
+github.com/michimani/gotwi
+github.com/michimani/gotwi/compliance/batchcompliance/types
+github.com/michimani/gotwi/fields
+github.com/michimani/gotwi/internal/gotwierrors
+github.com/michimani/gotwi/internal/util
+github.com/michimani/gotwi/list/listfollow/types
+github.com/michimani/gotwi/list/listlookup/types
+github.com/michimani/gotwi/list/listmember/types
+github.com/michimani/gotwi/list/listtweetlookup/types
+github.com/michimani/gotwi/list/managelist/types
+github.com/michimani/gotwi/list/pinnedlist/types
+github.com/michimani/gotwi/resources
+# github.com/pmezard/go-difflib v1.0.0
+## explicit
+github.com/pmezard/go-difflib/difflib
+# github.com/stretchr/testify v1.7.0
+## explicit; go 1.13
+github.com/stretchr/testify/assert
+# gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c
+## explicit
+gopkg.in/yaml.v3

@@ -3,8 +3,8 @@ package tweetlookup
 import (
 	"context"
 
-	"github.com/michimani/gotwi"
-	"github.com/michimani/gotwi/tweet/tweetlookup/types"
+	"github.com/nanom1t/gotwi"
+	"github.com/nanom1t/gotwi/tweet/tweetlookup/types"
 )
 
 const (

@@ -4,7 +4,7 @@ import (
 	"io"
 	"time"
 
-	"github.com/michimani/gotwi/internal/util"
+	"github.com/nanom1t/gotwi/internal/util"
 )
 
 type TweetCountsGranularity string
