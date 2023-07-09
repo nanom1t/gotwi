@@ -8,7 +8,6 @@ import (
 	"io"
 	"net/http"
 	"net/url"
-	"os"
 	"strings"
 	"time"
 
@@ -36,6 +35,8 @@ func (a AuthenticationMethod) Valid() bool {
 type NewClientInput struct {
 	HTTPClient           *http.Client
 	AuthenticationMethod AuthenticationMethod
+	ApiKey               string
+	ApiSecret            string
 	OAuthToken           string
 	OAuthTokenSecret     string
 	Debug                bool
@@ -59,6 +60,8 @@ type IClient interface {
 type Client struct {
 	Client               *http.Client
 	authenticationMethod AuthenticationMethod
+	apiKey               string
+	apiSecret            string
 	accessToken          string
 	oauthToken           string
 	oauthConsumerKey     string
@@ -90,6 +93,8 @@ func NewClient(in *NewClientInput) (*Client, error) {
 	c := Client{
 		Client:               defaultHTTPClient,
 		authenticationMethod: in.AuthenticationMethod,
+		apiKey:               in.ApiKey,
+		apiSecret:            in.ApiSecret,
 		debug:                in.Debug,
 	}
 
@@ -127,12 +132,11 @@ func NewClientWithAccessToken(in *NewClientWithAccessTokenInput) (*Client, error
 }
 
 func (c *Client) authorize(oauthToken, oauthTokenSecret string) error {
-	apiKey := os.Getenv(APIKeyEnvName)
-	apiKeySecret := os.Getenv(APIKeySecretEnvName)
-	if apiKey == "" || apiKeySecret == "" {
+	if c.apiKey == "" || c.apiSecret == "" {
 		return fmt.Errorf("env '%s' and '%s' is required.", APIKeyEnvName, APIKeySecretEnvName)
 	}
-	c.oauthConsumerKey = apiKey
+
+	c.oauthConsumerKey = c.apiKey
 
 	switch c.AuthenticationMethod() {
 	case AuthenMethodOAuth1UserContext:
@@ -142,10 +146,10 @@ func (c *Client) authorize(oauthToken, oauthTokenSecret string) error {
 
 		c.oauthToken = oauthToken
 		c.signingKey = fmt.Sprintf("%s&%s",
-			url.QueryEscape(apiKeySecret),
+			url.QueryEscape(c.apiSecret),
 			url.QueryEscape(oauthTokenSecret))
 	case AuthenMethodOAuth2BearerToken:
-		accessToken, err := GenerateBearerToken(c, apiKey, apiKeySecret)
+		accessToken, err := GenerateBearerToken(c, c.apiKey, c.apiSecret)
 		if err != nil {
 			return err
 		}
